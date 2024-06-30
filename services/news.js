@@ -5,7 +5,7 @@ module.exports = function(app) {
     async function getArticles() {
         if (articles.length === 0) {
             try {
-                const data = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_API_KEY}&limit=100`);
+                const data = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_API_KEY}&limit=100&countries=us&sort=popularity`);
                 const newArticles = await data.json();
                 articles = newArticles.data;
             } catch(e) {

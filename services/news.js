@@ -1,6 +1,6 @@
 module.exports = function(app) {
     
-    const articles = [];
+    let articles = [];
 
     async function getArticles() {
         if (articles.length === 0) {

@@ -14,6 +14,8 @@ module.exports = function(app) {
         }
     }
 
+    getArticles();
+
     app.get('/api/news', (req, res) => {
         res.json({ articles });
     })
